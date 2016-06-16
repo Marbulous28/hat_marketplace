@@ -1,0 +1,6 @@
+<ul>
+  {{#each model as |hat|}}
+     <li>{{#link-to 'hat' hat.id}}{{hat.type}} ${{hat.price}}{{/link-to}}
+     <img src={{hat.image}}></li>
+  {{/each}}
+</ul>

@@ -1,0 +1,7 @@
+<h3>Hats:</h3>
+<ul>
+  {{#each model as |hat|}}
+  <li>{{hat.type}}</li>
+  <button class='btn btn-warning'{{action 'delete' hat}}>Delete</button>
+  {{/each}}
+</ul>

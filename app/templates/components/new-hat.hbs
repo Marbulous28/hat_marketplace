@@ -1,0 +1,16 @@
+<h2>Add a hat</h2>
+<form>
+  <label for="type">Type</label>
+  {{input value=type}}
+
+  <label for="description">Description</label>
+  {{input value=description}}
+
+  <label for="price">Price</label>
+  {{input value=price}}
+
+  <label for="image">Image URL</label>
+  {{input value=image}}
+
+  <button {{action 'newHat'}}>Submit</button>
+</form>
