@@ -1,16 +1,20 @@
 <h2>Add a hat</h2>
-<form>
-  <label for="type">Type</label>
-  {{input value=type}}
+{{#if showNewHat}}
+  <form>
+    <label for="type">Type</label>
+    {{input value=type}}
 
-  <label for="description">Description</label>
-  {{input value=description}}
+    <label for="description">Description</label>
+    {{input value=description}}
 
-  <label for="price">Price</label>
-  {{input value=price}}
+    <label for="price">Price</label>
+    {{input value=price}}
 
-  <label for="image">Image URL</label>
-  {{input value=image}}
+    <label for="image">Image URL</label>
+    {{input value=image}}
 
-  <button {{action 'newHat'}}>Submit</button>
-</form>
+    <button {{action 'newHat'}}>Submit</button>
+  </form>
+{{else}}
+  <button {{action 'showHatForm'}}>Submit A Hat For Sale</button>
+{{/if}}

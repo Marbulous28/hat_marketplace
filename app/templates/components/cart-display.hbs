@@ -1,0 +1,8 @@
+<ul>
+{{#each shoppingCart.items as |item|}}
+  <li>{{item.type}} -- $ {{item.price}}</li>
+{{/each}}
+
+</ul>
+<h4>Total</h4>
+{{cartTotal}}

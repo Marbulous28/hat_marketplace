@@ -1,7 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  showNewHat: false,
   actions: {
+    showHatForm: function() {
+      this.set("showNewHat", true);
+    },
     newHat(){
       var params = {
         type: this.get('type'),
@@ -10,6 +14,7 @@ export default Ember.Component.extend({
         image: this.get('image'),
       };
       this.sendAction('newHat', params);
+      this.set("showNewHat", false);
     }
   }
 });

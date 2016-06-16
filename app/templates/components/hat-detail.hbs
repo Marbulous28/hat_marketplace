@@ -1,3 +1,5 @@
-<h1>{{hat.type}} ${{hat.price}}</h1>
-<img src={{hat.image}}>
-<h2> description: {{hat.description}} </h2>
+<h1>{{model.type}} ${{model.price}}</h1>
+<img src={{model.image}}>
+<h2> description: {{model.description}} </h2>
+
+<button {{action "addToCart" model}}>Add To Cart</button>
