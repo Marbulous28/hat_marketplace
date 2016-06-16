@@ -1,0 +1,15 @@
+<h1>Post a Comment about this hat:</h1>
+{{#if addNewComment}}
+
+  <form>
+    <label for="commentText">Comment</label>
+    {{input value=commentText}}
+
+    <label for="name">User</label>
+    {{input value=name}}
+
+    <button class="btn btn-warning" {{action 'postComment'}}>Post Comment</button>
+  </form>
+{{else}}
+  <button class="btn btn-warning" {{action "postNewComment"}}>Post a Comment</button>
+{{/if}}

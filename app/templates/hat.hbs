@@ -1,1 +1,10 @@
 {{hat-detail model=model addToCart='addToCart'}}
+{{new-comment hat=model postComment="postComment"}}
+
+
+<h5>Comments: </h5>
+<ul>
+  {{#each model.comments as |comment|}}
+    <li>{{comment.name}} says: {{comment.commentText}}</li>
+  {{/each}}
+</ul>
